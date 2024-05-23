@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adler</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png">
+
+</head>
+
+<body>
+  <header>
+    <img src="logo.png" alt="logo" class="logo">
+    <h2>Welcome to Adler</h2>
+    <p>Join us and start earning!</p>
+    <nav>
+      <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ads.html">Watch Ads</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="contacts.html">Contact Us</a></li>
+          <li><a href="staff.html">Staff</a></li>
+        </ul>
+  </nav>
+  <div id="pointsDisplay"></div>
+  </header>
+
+  <main>
+    <section id="ads">
+      <!-- Script-generated ad placeholders will be inserted here -->
+    </section>
+
+    <section id="terms-of-service">
+    
+    <main>
+        <section id="terms-of-service">
+            <h1>Terms of Service</h1>
+            <p><strong>1. Introduction</strong></p>
+            <p>These Terms of Service ("Terms") govern your use of the services provided by Adler ("Company", "we", "us", or "our") related to the Adler service (the "Service"). By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of the Terms, then you may not access the Service.</p>
+
+            <p><strong>2. Use of Service</strong></p>
+            <p><strong>Eligibility:</strong> You must be at least 9 years old and capable of entering into legally binding agreements to use the Service. By using the Service, you represent and warrant that you meet these eligibility requirements.</p>
+            <p><strong>User Account:</strong> You may need to create an account to access certain features of the Service. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.</p>
+            <p><strong>Prohibited Activities:</strong> You agree not to engage in any of the following prohibited activities:</p>
+            <ul>
+                <li>Violating any applicable laws or regulations.</li>
+                <li>Infringing upon the intellectual property rights of others.</li>
+                <li>Engaging in fraudulent, deceptive, or misleading conduct.</li>
+                <li>Interfering with or disrupting the Service or servers or networks connected to the Service.</li>
+                <li>Generating invalid clicks, impressions, or other interactions with advertisements.</li>
+            </ul>
+            <p><strong>Termination:</strong> We reserve the right to suspend or terminate your access to the Service at any time for any reason without prior notice or liability.</p>
+
+            <p><strong>3. Intellectual Property</strong></p>
+            <p><strong>Ownership:</strong> All content, materials, and trademarks on the Service are owned by or licensed to the Company and are protected by intellectual property laws.</p>
+            <p><strong>License:</strong> Subject to these Terms, we grant you a limited, non-exclusive, non-transferable license to access and use the Service for your personal or internal business purposes.</p>
+
+            <p><strong>4. Privacy</strong></p>
+            <p>Our Privacy Policy governs the collection, use, and disclosure of your personal information. By using the Service, you consent to the terms of our Privacy Policy.</p>
+
+            <p><strong>5. Disclaimer of Warranties</strong></p>
+            <p>The Service is provided on an "as is" and "as available" basis, without any warranties of any kind, either express or implied. We do not warrant that the Service will be error-free or uninterrupted.</p>
+
+            <p><strong>6. Limitation of Liability</strong></p>
+            <p>To the fullest extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of or inability to use the Service.</p>
+
+            <p><strong>7. Indemnification</strong></p>
+            <p>You agree to indemnify, defend, and hold harmless the Company and its affiliates, officers, directors, employees, and agents from and against any and all claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your use of the Service or any violation of these Terms.</p>
+
+            <p><strong>8. Modifications to Terms</strong></p>
+            <p>We reserve the right to update or modify these Terms at any time without prior notice. Your continued use of the Service after any such changes constitutes your acceptance of the revised Terms.</p>
+
+            <p><strong>9. Governing Law and Dispute Resolution</strong></p>
+            <p>These Terms shall be governed by and construed in accordance with the laws of PA, without regard to its conflict of law principles. Any dispute arising out of or relating to these Terms shall be resolved exclusively in the state or federal courts located in PA.</p>
+
+            <p><strong>10. Contact Us</strong></p>
+            <p>If you have any questions about these Terms, please contact us at <a href="mailto:zwang99@mtlstudents.net">zwang99@mtlstudents.net</a>.</p>
+        </section>
+    </main>
+    
+    <footer>
+      <p>Contact us: Everrett MacPhail <a href="mailto:emacphail38@mtlstudents.net">emacphail38@mtlstudents.net</a> Nolan Liang <a href="mailto:nliang20@mtlstudents.net">nliang20@mtlstudents.net</a>, Zimo Wang <a href="mailto:zwang99@mtlstudents.net">zwang99@mtlstudents.net</a></p>
+  </footer>
+  <script>
+    // Array of ad categories
+    const adCategories = [
+    "AI-driven analytics platform", 
+    "Blockchain-based payment system", 
+    "Cloud-based project management tool", 
+    "Automated customer service solution", 
+    "E-commerce optimization software",
+    "Limited edition luxury watch", 
+    "VIP access to exclusive events", 
+    "Personalized shopping experience with a stylist", 
+    "Customized travel packages for elite clients", 
+    "Members-only fitness retreat",
+    "Augmented reality glasses", 
+    "Foldable smartphone with dual screens", 
+    "Smart home assistant with emotion recognition", 
+    "3D printer for food", 
+    "Wearable translator device",
+    "Sustainable fashion made from recycled materials", 
+    "Retro-inspired streetwear collection", 
+    "Gender-neutral clothing line", 
+    "Tech-infused clothing with built-in sensors", 
+    "Customizable shoes with interchangeable parts",
+    "All-inclusive resort package in the Maldives", 
+    "Adventure tour through the Amazon rainforest", 
+    "Cultural immersion trip to Japan", 
+    "Luxury cruise around the Mediterranean", 
+    "Safari experience in Africa",
+    "Smart fitness tracker with AI coaching", 
+    "Home gym equipment with virtual reality workouts", 
+    "Nutrient-rich meal replacement shakes", 
+    "Portable massage gun for recovery", 
+    "Yoga mat with built-in alignment guide",
+    "Minimalist Scandinavian furniture", 
+    "Smart lighting system controlled by voice commands", 
+    "Hydroponic indoor garden for fresh herbs", 
+    "Aromatherapy diffuser with essential oils", 
+    "Customizable modular shelving units",
+    "Gourmet meal kits delivered to your door", 
+    "Healthy snack subscription box", 
+    "Authentic ethnic cuisine delivery service", 
+    "Farm-to-table organic produce delivery", 
+    "Plant-based meal delivery for vegans",
+    "Coding bootcamp for beginners", 
+    "Digital marketing masterclass with industry experts", 
+    "Photography course taught by a professional photographer", 
+    "Yoga and mindfulness meditation course", 
+    "Language learning program with interactive lessons",
+    "Organic skincare line with natural ingredients", 
+    "Anti-aging serum with revolutionary formula", 
+    "Vegan and cruelty-free makeup collection", 
+    "Haircare products for all hair types", 
+    "DIY spa kit for at-home pampering"
+];
+  
+let points = parseFloat(localStorage.getItem('points')) || 0; // Load points from localStorage or default to 0
+let p = 0;
+
+// Function to generate random ads and add points
+function generateAds() {
+  const adsContainer = document.getElementById('ads');
+  let adsHTML = ''; // Initialize an empty string for ad HTML
+
+  for (let i = 0; i < 500; i++) { // Generate 500 ads
+    const randomCategory = adCategories[Math.floor(Math.random() * adCategories.length)];
+    const randomNumber = Math.floor(Math.random() * 1000); // Generating random number between 0 and 999
+    const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`; // Generating random color
+    adsHTML += `
+          <div class="ad" style="background-color: ${randomColor};">
+            <img src="https://picsum.photos/200/300?random=${randomNumber}" alt="Ad Placeholder">
+            <p>${randomCategory}</p>
+            <a href="https://www.google.com/">Explore Now</a>
+          </div>
+        `;
+  }
+
+  // Append all ads to the ads container at once
+  adsContainer.innerHTML = adsHTML;
+
+}
+
+// Function to refresh ads and update points every second
+function refreshAds() {
+  setInterval(() => {
+    points += 0.001; // Add 0.001 points every second
+    document.getElementById('pointsDisplay').innerText = `Points: ${points.toFixed(3)}`;
+  localStorage.setItem('points', points); // Save points to localStorage
+    p+= 1;
+    if (p%3==0) {
+      generateAds()
+    };
+  }, 1000);
+  
+}
+
+// Generate ads when the page loads
+window.onload = function () {
+  generateAds();
+  refreshAds(); // Start refreshing ads after page load
+};
+</script>
+</body>
+</html>
+
+
+
+
+

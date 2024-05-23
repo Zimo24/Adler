@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adler Staff</title>
+    <style>
+        .employee-container {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .gmail-logo {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+    </style>
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="logo.png" alt="Website Logo" class="logo">
+        </div>
+        <h1>Welcome to Adler</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ads.html">Watch Ads</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contacts.html">Contact Us</a></li>
+                <li><a href="staff.html">Staff</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Container for employee data -->
+    <div id="employeeList"></div>
+    <footer>
+        <p>Contact us: Everrett MacPhail <a href="mailto:emacphail38@mtlstudents.net">emacphail38@mtlstudents.net</a> Nolan Liang <a href="mailto:nliang20@mtlstudents.net">nliang20@mtlstudents.net</a>, Zimo Wang <a href="mailto:zwang99@mtlstudents.net">zwang99@mtlstudents.net</a></p>
+    </footer>
+    <script>
+        // Define employee data
+        const employees = [
+            { name: "Stepan Washinton", email: "swashington14@mtlstudents.net", role: "Brainstormer" },
+            { name: "Zimo Wang", email: "zwang99@mtlstudents.net", role: "Owner" },
+            { name: "Nolan Liang", email: "nliang20@mtlstudents.net", role: "Co-Owner" },
+            { name: "Everrett MacPhail", email: "emacphail38@mtlstudents.net", role: "Co-Owner" }
+        ];
+
+        // Function to group employees by role
+        function groupEmployeesByRole(employees) {
+            const groupedEmployees = {};
+            employees.forEach(employee => {
+                const { role, ...employeeData } = employee;
+                if (!groupedEmployees[role]) {
+                    groupedEmployees[role] = [employeeData];
+                } else {
+                    groupedEmployees[role].push(employeeData);
+                }
+            });
+            return groupedEmployees;
+        }
+
+        // Group employees by role
+        const groupedEmployees = groupEmployeesByRole(employees);
+
+        // Display grouped employees in containers
+        const employeeListContainer = document.getElementById('employeeList');
+        for (const role in groupedEmployees) {
+            const roleContainer = document.createElement('div');
+            roleContainer.classList.add('employee-container');
+            const roleHeading = document.createElement('h2');
+            roleHeading.textContent = `Employees in ${role}:`;
+            roleContainer.appendChild(roleHeading);
+            groupedEmployees[role].forEach(employee => {
+                const employeeInfo = document.createElement('p');
+                const emailWithLogo = document.createElement('span');
+                emailWithLogo.textContent = `Email: ${employee.email}`;
+                const gmailLogo = document.createElement('img');
+                gmailLogo.src = "https://www.google.com/images/icons/material/system/1x/mail_grey600_24dp.png";
+                gmailLogo.alt = "Gmail Logo";
+                gmailLogo.classList.add('gmail-logo');
+                emailWithLogo.appendChild(gmailLogo);
+                employeeInfo.appendChild(emailWithLogo);
+                roleContainer.appendChild(employeeInfo);
+            });
+            employeeListContainer.appendChild(roleContainer);
+        }
+    </script>
+</body>
+</html>
